@@ -9,16 +9,3 @@ console.log("hello type script from antigravity IDE");
 //   }
 // }
 */
-
-let age: number = 20;
-let firstName: string = "Nassir";
-let isActive: boolean = true;
-let hobbies: string[] = ["reading", "coding", "travelling"];
-
-for (const hobby of hobbies) {
-  console.log(hobby);
-}
-
-console.log(age);
-console.log(firstName);
-console.log(isActive);
