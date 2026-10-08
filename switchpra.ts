@@ -123,25 +123,23 @@ switch (true) {
 }
 
 // ==============================================================================
-// PART 4: ORDER STATUS (USING 'as const' OBJECT INSTEAD OF ENUM)
+// PART 4: ORDER STATUS (USING TYPESCRIPT ENUM)
 // ==============================================================================
 
-// 1. Create a fixed list of order status options.
-//    'as const' tells TypeScript: "Lock these values, do not allow changing them."
-const OrderStatus = {
-  Pending: "PENDING",
-  Processing: "PROCESSING",
-  Shipped: "SHIPPED",
-  Delivered: "DELIVERED",
-  Cancelled: "CANCELLED",
-} as const;
+// 1. Define an enum for order status options.
+//    'enum' creates both runtime values (OrderStatus.Pending) and a type (OrderStatus) in one step.
+//    Note: Run with `npx tsx switchpra.ts` because TypeScript enums generate runtime code.
+enum OrderStatus {
+  Pending = "PENDING",
+  Processing = "PROCESSING",
+  Shipped = "SHIPPED",
+  Delivered = "DELIVERED",
+  Cancelled = "CANCELLED",
+}
 
-// 2. Create a type rule: 'OrderStatus' can only be "PENDING" | "PROCESSING" | "SHIPPED" | ...
-type OrderStatus = (typeof OrderStatus)[keyof typeof OrderStatus];
-
-// 3. A function that takes an order status and prints what to do
+// 2. A function that takes an order status and prints what to do
 function handleOrderStatus(status: OrderStatus): void {
-  // 'status' holds one string (e.g. "SHIPPED"). We compare it to our choices above.
+  // 'status' holds one OrderStatus enum value. We compare it to our choices above.
   switch (status) {
     case OrderStatus.Pending:
       console.log("Order received. Awaiting payment confirmation.");
@@ -174,33 +172,27 @@ let myOrder: OrderStatus = OrderStatus.Shipped;
 handleOrderStatus(myOrder);
 
 // ==============================================================================
-// PART 5: TRAFFIC LIGHT (RETURNING VALUES DIRECTLY FROM SWITCH)
+// PART 5: TRAFFIC LIGHT (RETURNING VALUES DIRECTLY FROM SWITCH USING ENUM)
 // ==============================================================================
 
-// 1. The 3 light colors locked with 'as const'
-const TrafficLight = {
-  Red: "RED",
-  Yellow: "YELLOW",
-  Green: "GREEN",
-} as const;
+// 1. Define the TrafficLight enum
+enum TrafficLight {
+  Red = "RED",
+  Yellow = "YELLOW",
+  Green = "GREEN",
+}
 
-// 2. Type rule: TrafficLight can only be "RED" | "YELLOW" | "GREEN"
-type TrafficLight = (typeof TrafficLight)[keyof typeof TrafficLight];
-
-// 3. Function that returns an instruction message based on the light
+// 2. Function that returns an instruction message based on the signal
 function getTrafficAction(signal: TrafficLight): string {
   switch (signal) {
     case TrafficLight.Red:
-      return "STOP: Do not proceed."; // 'return' sends the message back and exits immediately
+      return "STOP: Do not proceed.";
 
     case TrafficLight.Yellow:
       return "CAUTION: Prepare to stop.";
 
     case TrafficLight.Green:
       return "GO: Safe to proceed.";
-
-    default:
-      return "Signal malfunction: Proceed with extreme caution.";
   }
 }
 
