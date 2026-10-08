@@ -1,0 +1,215 @@
+{
+  "platform": "TechCorp Global Enterprise",
+  "version": "3.4.2",
+  "environment": "production",
+  "metadata": {
+    "generatedAt": "2026-10-08T17:55:00Z",
+    "totalRecords": 1420,
+    "regionCoverage": ["APAC", "EMEA", "NA", "LATAM"]
+  },
+  "organization": {
+    "orgId": "ORG-9982",
+    "name": "Nassir Tech Innovations",
+    "headquarters": {
+      "city": "Dhaka",
+      "country": "Bangladesh",
+      "zip": "1212",
+      "geo": {
+        "lat": 23.8103,
+        "lng": 90.4125
+      }
+    },
+    "departments": [
+      {
+        "deptId": "D-ENG",
+        "deptName": "Engineering & Architecture",
+        "budget": 2500000,
+        "manager": {
+          "id": "EMP-001",
+          "name": "Nassir Sazid",
+          "email": "nassir@techcorp.com",
+          "accessLevel": "ADMIN"
+        },
+        "teams": [
+          {
+            "teamId": "T-CORE",
+            "teamName": "Core Platform & Infrastructure",
+            "techStack": ["TypeScript", "Go", "Docker", "Kubernetes", "PostgreSQL"],
+            "lead": "Sazid",
+            "members": [
+              {
+                "empId": "EMP-101",
+                "name": "Alex Mercer",
+                "role": "Senior Backend Engineer",
+                "salary": 115000,
+                "skills": [
+                  { "name": "TypeScript", "rating": 9, "verified": true },
+                  { "name": "PostgreSQL", "rating": 8, "verified": true },
+                  { "name": "Redis", "rating": 7, "verified": false }
+                ],
+                "devices": [
+                  { "type": "MacBook Pro", "os": "macOS 15", "serial": "MBP-9812" },
+                  { "type": "Phone", "os": "iOS 18", "serial": "IPH-4432" }
+                ],
+                "performanceHistory": [
+                  { "quarter": "Q1-2026", "score": 94, "bonus": 5000 },
+                  { "quarter": "Q2-2026", "score": 91, "bonus": 4200 },
+                  { "quarter": "Q3-2026", "score": 97, "bonus": 6000 }
+                ]
+              },
+              {
+                "empId": "EMP-102",
+                "name": "Elena Rostova",
+                "role": "DevOps Architect",
+                "salary": 125000,
+                "skills": [
+                  { "name": "Kubernetes", "rating": 10, "verified": true },
+                  { "name": "Terraform", "rating": 9, "verified": true },
+                  { "name": "AWS", "rating": 9, "verified": true }
+                ],
+                "devices": [
+                  { "type": "ThinkPad X1", "os": "Ubuntu 24.04", "serial": "TP-7719" }
+                ],
+                "performanceHistory": [
+                  { "quarter": "Q1-2026", "score": 89, "bonus": 3500 },
+                  { "quarter": "Q2-2026", "score": 96, "bonus": 5800 }
+                ]
+              }
+            ],
+            "activeSprints": [
+              {
+                "sprintId": "SPR-401",
+                "sprintName": "Q4 Gateway Migration",
+                "status": "ACTIVE",
+                "velocity": 42,
+                "tasks": [
+                  {
+                    "taskId": "TSK-801",
+                    "title": "Implement Distributed Rate Limiter",
+                    "priority": "CRITICAL",
+                    "storyPoints": 8,
+                    "isCompleted": false,
+                    "assignee": "EMP-101",
+                    "tags": ["redis", "security", "api"],
+                    "timeLogs": [
+                      { "date": "2026-10-01", "hours": 4.5, "loggedBy": "EMP-101" },
+                      { "date": "2026-10-02", "hours": 3.0, "loggedBy": "EMP-101" }
+                    ],
+                    "comments": [
+                      {
+                        "commentId": "CMT-1",
+                        "author": "Nassir Sazid",
+                        "text": "Ensure sliding window algorithm is used.",
+                        "createdAt": "2026-10-02T09:15:00Z"
+                      },
+                      {
+                        "commentId": "CMT-2",
+                        "author": "Alex Mercer",
+                        "text": "Tested with 10k RPS in staging, looks solid.",
+                        "createdAt": "2026-10-03T14:30:00Z"
+                      }
+                    ]
+                  },
+                  {
+                    "taskId": "TSK-802",
+                    "title": "Automate Cluster Autoscaling",
+                    "priority": "HIGH",
+                    "storyPoints": 5,
+                    "isCompleted": true,
+                    "assignee": "EMP-102",
+                    "tags": ["k8s", "infra", "automation"],
+                    "timeLogs": [
+                      { "date": "2026-10-04", "hours": 6.0, "loggedBy": "EMP-102" }
+                    ],
+                    "comments": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "teamId": "T-FRONT",
+            "teamName": "Frontend & Design Systems",
+            "techStack": ["React", "TypeScript", "Next.js", "TailwindCSS"],
+            "lead": "Sophia Chen",
+            "members": [
+              {
+                "empId": "EMP-103",
+                "name": "David Kim",
+                "role": "Senior UI Engineer",
+                "salary": 108000,
+                "skills": [
+                  { "name": "React", "rating": 9, "verified": true },
+                  { "name": "CSS/Animations", "rating": 9, "verified": true },
+                  { "name": "TypeScript", "rating": 8, "verified": true }
+                ],
+                "devices": [
+                  { "type": "MacBook Air", "os": "macOS 15", "serial": "MBA-3321" }
+                ],
+                "performanceHistory": [
+                  { "quarter": "Q1-2026", "score": 92, "bonus": 4500 },
+                  { "quarter": "Q2-2026", "score": 94, "bonus": 5000 }
+                ]
+              }
+            ],
+            "activeSprints": [
+              {
+                "sprintId": "SPR-402",
+                "sprintName": "Dashboard Glassmorphism Revamp",
+                "status": "PLANNING",
+                "velocity": 30,
+                "tasks": [
+                  {
+                    "taskId": "TSK-901",
+                    "title": "Design Micro-animations for charts",
+                    "priority": "MEDIUM",
+                    "storyPoints": 3,
+                    "isCompleted": false,
+                    "assignee": "EMP-103",
+                    "tags": ["ui", "framer-motion", "ux"],
+                    "timeLogs": [],
+                    "comments": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "financials": {
+    "fiscalYear": 2026,
+    "currency": "USD",
+    "quarterlyRevenue": {
+      "Q1": 1250000,
+      "Q2": 1420000,
+      "Q3": 1680000,
+      "Q4": 1950000
+    },
+    "regionalBreakdown": [
+      {
+        "region": "North America",
+        "activeClients": 45,
+        "revenueByMonth": [120000, 135000, 140000, 150000, 160000, 175000]
+      },
+      {
+        "region": "Asia Pacific",
+        "activeClients": 78,
+        "revenueByMonth": [180000, 195000, 210000, 225000, 240000, 260000]
+      }
+    ]
+  },
+  "activityMatrix": [
+    [12, 15, 18, 22, 9, 4, 1],
+    [14, 20, 25, 30, 15, 6, 2],
+    [10, 18, 22, 28, 12, 5, 0],
+    [16, 24, 32, 40, 20, 8, 3]
+  ],
+  "serverStatusMap": {
+    "us-east-1": { "status": "HEALTHY", "pingMs": 24, "load": 0.45 },
+    "eu-west-1": { "status": "HEALTHY", "pingMs": 38, "load": 0.62 },
+    "ap-southeast-1": { "status": "DEGRADED", "pingMs": 112, "load": 0.89 },
+    "ap-south-1": { "status": "HEALTHY", "pingMs": 18, "load": 0.31 }
+  }
+}
