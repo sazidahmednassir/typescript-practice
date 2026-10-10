@@ -56,3 +56,17 @@ const info = (name: string, email: string): void => {
 // Calling the arrow function
 info("Nassir", "sazid34@yopmail.com"); // Output: Name: Nassir, Email: sazid34@yopmail.com
 
+//optional function
+function setInfo(name: string, age?: number): string | number | undefined {
+  return `Name: ${name}, Age: ${age}`;
+}
+
+console.log(setInfo("Nassir", 25)); // Output: Name: Nassir, Age: 25
+console.log(setInfo("Ahmed")); // Output: Name: Ahmed, Age: undefined
+
+//default function
+const greet = (name: string = "Nassir", message: string) => {
+  return `hello ${name}, ${message}`;
+};
+
+console.log(greet(undefined, "Are you alone"));
