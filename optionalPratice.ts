@@ -1,5 +1,5 @@
 type User = {
-  id: number;
+  id?: number;
   name: string;
   email: string;
 };
@@ -8,7 +8,7 @@ const users: User[] = [];
 
 let lastId: number = 0;
 
-function adduser(user: Omit<User, "id">): User {
+function adduser(user: User): User {
   const newUser: User = {
     id: ++lastId,
     ...user,
