@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "total": 208,
+    "date": "2026-10-15",
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "total": 349,
+    "date": "2026-10-16",
+    "status": "shipped"
+  },
+  {
+    "id": 3,
+    "userId": 3,
+    "total": 129,
+    "date": "2026-10-17",
+    "status": "delivered"
+  }
+]
