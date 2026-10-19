@@ -28,3 +28,25 @@ let values: (string | number | boolean)[] = [
 for (const val of values) {
   console.log("Value is : ", val);
 }
+
+console.log("---------------------------------");
+
+let userName: string[] = ["NASS", "HA", "HAM"];
+userName.push("2020type");
+
+for (const user of userName) {
+  console.log("Name : ", user.toUpperCase());
+}
+
+console.log("---------------------------------");
+
+let statusValue: (string | number)[] = ["active", 1, "inactive"];
+statusValue.push(0);
+statusValue.push("yes");
+
+for (const status of statusValue) {
+  console.log("Status is :", status);
+}
+
+statusValue.sort();
+console.log(statusValue);
