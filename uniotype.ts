@@ -4,8 +4,8 @@
 
 // 1. Union Type Variable: Can hold either a string OR a number
 let userId: string | number;
-userId = 123;         // Valid: number
-userId = "BS23SZNX";   // Valid: string
+userId = 123; // Valid: number
+userId = "BS23SZNX"; // Valid: string
 
 // 2. Type Narrowing with Union Types:
 // Using 'typeof' allows TypeScript to know the exact type inside each branch
@@ -20,5 +20,26 @@ function getUserInformation(id: string | number) {
 }
 
 // Function calls with different allowed types
-getUserInformation(323);          // Works with number
+getUserInformation(323); // Works with number
 getUserInformation("bs23.sazid"); // Works with string
+
+type presentOrNot = {
+  status: boolean | string | number;
+};
+
+let isPresent: presentOrNot;
+
+function getPresent(present: presentOrNot): void {
+  if (present.status === "Present") {
+    console.log("He is present");
+  } else if (present.status === 1) {
+    console.log("He is present");
+  } else {
+    console.log("He is absent");
+  }
+}
+
+getPresent({ status: true });
+getPresent({ status: 1 });
+getPresent({ status: "Present" });
+getPresent({ status: "absent" });
