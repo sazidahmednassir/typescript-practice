@@ -50,3 +50,15 @@ for (const status of statusValue) {
 
 statusValue.sort();
 console.log(statusValue);
+
+type Person = {
+  name: string;
+  email: string;
+};
+
+let people: Person[] = [
+  {
+    name: "Nassir",
+    email: "sazid23@yopmail.com",
+  },
+];

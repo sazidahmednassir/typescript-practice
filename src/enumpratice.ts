@@ -1,3 +1,5 @@
+//Define custom key and value
+
 enum Colors {
   Red = "red",
   Blue = "blue",
@@ -125,3 +127,14 @@ function adduser(user: Omit<User, "id">): User {
 adduser({ name: "Jasim", email: "jasim23@yopmail.com" });
 adduser({ name: "Nassir", email: "nassir23@yopmail.com" });
 console.log(users);
+
+//store data but constant data willl be store
+
+enum Theme {
+  Light = "light",
+  Dark = "dark",
+}
+
+const currentTheme: Theme = Theme.Dark;
+
+console.log(currentTheme);
