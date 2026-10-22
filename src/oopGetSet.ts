@@ -96,3 +96,38 @@ console.log(p.fullName); // "Hasibul Nayem"
 
 // p.fullName = "X";     // no setter, can't assign
 // p.birthYear = 1800;   // setter validation fails
+
+// -------------------------------------------------------------
+// Example: No constructor — only Getters and Setters
+// -------------------------------------------------------------
+class TemperatureConverter {
+  // Stored internally in Celsius (defaults to 0)
+  private _celsius: number = 0;
+
+  // --- Celsius Getter & Setter ---
+  get celsius(): number {
+    return this._celsius;
+  }
+  set celsius(value: number) {
+    this._celsius = value; // Setter saves value directly
+  }
+
+  // --- Fahrenheit Getter & Setter ---
+  get fahrenheit(): number {
+    return (this._celsius * 9) / 5 + 32; // Getter converts on read
+  }
+  set fahrenheit(value: number) {
+    this._celsius = ((value - 32) * 5) / 9; // Setter converts on write
+  }
+}
+
+const temp = new TemperatureConverter(); // No constructor needed!
+
+// 1. Set Celsius ➡️ Read Fahrenheit
+temp.celsius = 25; // Setter sets _celsius = 25
+console.log(temp.fahrenheit); // Getter calculates and prints 77
+
+// 2. Set Fahrenheit ➡️ Read Celsius (The reverse)
+temp.fahrenheit = 212; // Setter converts 212°F -> 100°C and saves it
+console.log(temp.celsius); // Getter reads and prints 100
+
